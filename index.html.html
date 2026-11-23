@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SC STORE </title>
+    <style>
+        :root {
+            --negro: #0a0a0a;
+            --blanco: #ffffff;
+            --dorado: #D4AF37;
+            --gris-suave: #f4f4f4;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            background-color: var(--blanco);
+            color: var(--negro);
+            scroll-behavior: smooth;
+        }
+
+        /* Navegación */
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            box-sizing: border-box;
+            z-index: 1000;
+            border-bottom: 1px solid var(--dorado);
+        }
+
+        nav a {
+            color: var(--blanco);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--dorado); }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: var(--negro);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--blanco);
+        }
+
+        .hero h1 { 
+            font-size: 4rem; 
+            margin: 0; 
+            letter-spacing: 10px; 
+            color: var(--dorado);
+        }
+
+        .hero p { font-style: italic; font-weight: 200; margin-bottom: 2rem; }
+
+        .btn {
+            padding: 12px 30px;
+            border: 1px solid var(--dorado);
+            color: var(--dorado);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background: var(--dorado); color: var(--negro); }
+
+        /* Secciones Generales */
+        section { padding: 80px 10% 20px; text-align: center; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .card {
+            border: 1px solid #eee;
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover { transform: translateY(-5px); border-color: var(--dorado); }
+
+        .placeholder-img {
+            background-color: var(--gris-suave);
+            height: 350px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ccc;
+            text-transform: uppercase;
+        }
+
+        footer { background: var(--negro); color: var(--blanco); padding: 40px; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="color: var(--dorado); font-weight: bold; font-size: 1.5rem;">AURA</div>
+        <div>
+            <a href="#inicio">Inicio</a>
+            <a href="#catalogo">Catálogo</a>
+            <a href="#exclusivos">Exclusivos</a>
+            <a href="#promociones">Promociones</a>
+            <a href="#contacto">Contacto</a>
+            <a href="#">🛒</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="hero">
+        <h1>AURA</h1>
+        <p>"Un buen estilo de ropa, un buen estilo de vida"</p>
+        <a href="#catalogo" class="btn">VER COLECCIÓN</a>
+    </section>
+
+    <section id="catalogo">
+        <h2 style="border-bottom: 2px solid var(--dorado); display: inline-block;">CATÁLOGO</h2>
+        <div class="grid">
+            <div class="card"><div class="placeholder-img">Hoodie Minimal</div><p>Essential Black - $45</p></div>
+            <div class="card"><div class="placeholder-img">Tee Oversize</div><p>Pure White - $30</p></div>
+            <div class="card"><div class="placeholder-img">Jogger</div><p>Urban Gold Line - $55</p></div>
+        </div>
+    </section>
+
+    <section id="exclusivos" style="background-color: var(--negro); color: var(--blanco);">
+        <h2 style="color: var(--dorado);">EDICIÓN EXCLUSIVA</h2>
+        <p>Prendas con detalles en hilo de oro de 24k.</p>
+        <div class="grid">
+            <div class="card" style="border-color: var(--dorado);"><div class="placeholder-img">Limited Jacket</div></div>
+            <div class="card" style="border-color: var(--dorado);"><div class="placeholder-img">Luxury Watch</div></div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>CONTACTO</h2>
+        <p>¿Tienes dudas? Escríbenos.</p>
+        <form style="display: flex; flex-direction: column; max-width: 400px; margin: auto; gap: 10px;">
+            <input type="text" placeholder="Nombre" style="padding: 10px; border: 1px solid #ddd;">
+            <input type="email" placeholder="Email" style="padding: 10px; border: 1px solid #ddd;">
+            <textarea placeholder="Mensaje" style="padding: 10px; border: 1px solid #ddd; height: 100px;"></textarea>
+            <button type="submit" class="btn" style="background: var(--negro); cursor: pointer;">ENVIAR</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AURA Minimalist Clothing. Dirigido a la nueva generación.</p>
+    </footer>
+
+</body>
+</html>
